@@ -1,0 +1,232 @@
+<% if(locals.type=="player" ){ %>
+
+  <section class="text-gray-600 body-font w-[70vw] m-auto">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <%=dataobj.name %>
+        </h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <%=dataobj.tag %>
+        </p>
+      </div>
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+              src="images/townHall/Town_Hall<%= dataobj.townHallLevel  %>.webp">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 title-font font-medium">Town Hall</h2>
+              <p class="text-gray-500">
+                <%=dataobj.townHallLevel %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+              src="images/builderHall/Builder_Hall<%= dataobj.builderHallLevel  %>.webp">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 title-font font-medium">Builder Hall</h2>
+              <p class="text-gray-500">
+                <%=dataobj.builderHallLevel %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+              src="images/others/EXP.webp">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 title-font font-medium">EXP</h2>
+              <p class="text-gray-500">
+                <%=dataobj.expLevel %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <% if(locals.dataobj.league){ %>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/leagues/<%= dataobj.league.name %>.webp">
+
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">Current Trophies</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.trophies %>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <% } %>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/leagues/Trophy.webp">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">Best Trophies</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.bestTrophies %>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src=<%=dataobj.clan.badgeUrls.small %>>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">Clan</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.clan.name %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/others/3stars.webp">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">War Stars</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.warStars %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/others/attack.png">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">Attack Wins</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.attackWins %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/others/shield.jpeg">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">Defense Wins</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.defenseWins %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/others/bhtrophies.webp">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">bestBuilderBaseTrophies</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.bestBuilderBaseTrophies %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/others/bhtrophies.webp">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">builderBaseTrophies</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.builderBaseTrophies %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/others/bhtrophies.webp">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">builderBaseLeague</h2>
+                <p class="text-gray-500">
+                  <%=dataobj.builderBaseLeague.name %>
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="flex flex-col text-center w-full mt-20 mb-16">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Heroes</h1>
+      </div>
+      <div class="flex flex-wrap -m-2">
+
+        <% for(let i=0;i<dataobj.heroes.length;i++){ %>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="images/heroes/<%= dataobj.heroes[i].name  %>.webp">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">
+                  <%=dataobj.heroes[i].name %>
+                </h2>
+                <p class="text-gray-500">
+                  <%=dataobj.heroes[i].level %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+
+      </div>
+      <div class="flex flex-col text-center w-full mt-20 mb-16">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Troops</h1>
+      </div>
+      <div class="flex flex-wrap -m-2">
+
+        <% for(let i=0;i<dataobj.troops.length;i++){ %>
+          <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                src="https://dummyimage.com/108x98">
+              <div class="flex-grow">
+                <h2 class="text-gray-900 title-font font-medium">
+                  <%=dataobj.troops[i].name %>
+                </h2>
+                <p class="text-gray-500">
+                  <%=dataobj.troops[i].level %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+
+      </div>
+    </div>
+  </section>
+  <% } %>
+
+
+    <div class="container m-3">
+      <% for (const key in dataobj) { %>
+        <p class="mb-2"><span class="font-semibold">
+            <%= `${key}:` %>
+          </span> <span>
+            <%= getValue(dataobj[key]) %>
+          </span></p>
+        <% } %>
+    </div>
+
+    <% function getValue(value) { if (Array.isArray(value)) { return value.map(item=> JSON.stringify(item)).join(', ');
+      } else if (typeof value === 'object') {
+      return JSON.stringify(value);
+      } else {
+      return value;
+      }
+      } %>
+      </div>
